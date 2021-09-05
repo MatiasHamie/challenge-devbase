@@ -1,5 +1,6 @@
 import "./App.scss";
 import Header from "./components/Header";
+import PersonPage from "./components/PersonPage";
 import NavBar from "./components/shared/NavBar";
 import UserButtonContainer from "./components/UserButtonsContainer";
 

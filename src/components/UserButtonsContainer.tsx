@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import PersonPage from "./PersonPage";
 import UserButton from "./UserButton";
 
 const UserButtonContainer = () => {
@@ -9,10 +10,13 @@ const UserButtonContainer = () => {
     "rkh",
     "josh",
   ];
+
+  const [userPicked, setuserPicked] = useState(null);
+
   return (
     <div className="userbutton-container">
       {topUsers.map((user) => (
-        <UserButton key={user} userName={user}/>
+        <UserButton key={user} userName={user} />
       ))}
     </div>
   );
