@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import PersonPage from "./PersonPage";
+import React from "react";
 import UserButton from "./UserButton";
 
 const UserButtonContainer = () => {
@@ -10,8 +9,6 @@ const UserButtonContainer = () => {
     "rkh",
     "josh",
   ];
-
-  const [userPicked, setuserPicked] = useState(null);
 
   return (
     <div className="userbutton-container">

@@ -1,9 +1,21 @@
-import React from "react";
+import React, { FC } from "react";
+import { useHistory } from "react-router";
 
-const NavBar = () => {
+type Props = {
+  title: string;
+};
+
+const NavBar: FC<Props> = ({ title }) => {
+  const history = useHistory();
+
+  const handleOnClick = () => {
+    history.goBack();
+  };
+
   return (
     <div className="navbar">
-      <h1>Home</h1>
+      <button onClick={handleOnClick}>Back</button>
+      <h1>{title}</h1>
     </div>
   );
 };

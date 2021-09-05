@@ -1,18 +1,23 @@
-import "./App.scss";
-import Header from "./components/Header";
-import PersonPage from "./components/PersonPage";
-import NavBar from "./components/shared/NavBar";
-import UserButtonContainer from "./components/UserButtonsContainer";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import PersonPage from "./pages/PersonPage";
+import "./styles/App.scss";
 
 function App() {
   return (
     <div className="App">
-      <section className="app-header">
-        <NavBar />
-      </section>
       <section className="app-body">
-        <Header />
-        <UserButtonContainer />
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route exact path="/person">
+              <PersonPage />
+            </Route>
+          </Switch>
+        </Router>
       </section>
     </div>
   );
