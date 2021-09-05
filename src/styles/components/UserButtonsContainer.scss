@@ -3,4 +3,10 @@
   align-items: left;
   justify-content: left;
   gap: 0.5rem;
+
+  @media screen and(max-width: 700px) {
+    flex-direction: column;
+    margin: 3rem auto;
+    width: 70%;
+  }
 }
